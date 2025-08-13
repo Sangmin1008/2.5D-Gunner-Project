@@ -64,7 +64,7 @@ public class PlayerRotationHandler : MonoBehaviour
             if (lookDirection.sqrMagnitude > 0.1f)
             {
                 Quaternion newRotation = Quaternion.LookRotation(lookDirection);
-                transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, rotationSpeed * Time.deltaTime);
+                transform.rotation = newRotation;
             }
         }
     }
